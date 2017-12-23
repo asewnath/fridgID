@@ -1,0 +1,141 @@
+body{
+
+  background-image: url("https://image.ibb.co/nqyeVw/background.png");
+  background-repeat: repeat-x;
+  background-color: #afc9cd;
+  font: 14px gotham;
+  color: #44597f;
+  overflow:hidden;
+}
+
+
+#openedImage{
+  position:absolute;
+  top:0px; left:0px;
+  background: url(https://image.ibb.co/i0187b/fridge_Opened2.png);
+  background-size: 95% 95%;
+  width: 1045px;
+  height: 859px;
+  background-repeat: no-repeat;
+}
+
+
+#closedImage{
+  position:absolute;
+  top:0px; left:0px;
+  background: url(https://image.ibb.co/dG09Vw/fridge_Closed.png);
+  background-size: 95% 95%;
+  width: 1045px;
+  height: 859px;
+  background-repeat: no-repeat;
+}
+
+/* sidebar for navigatiion buttons */
+#sidebar{
+  position:absolute;
+  top:185px;
+  left:552px;
+  width:110px;
+  text-align:left;
+
+}
+
+/* fridge "body" CONTENTS BOX*/
+#mainBody{
+  position:absolute;
+  top:122px;
+  left:165px;
+  width:350px;
+  height:594px;
+  padding:20px;
+  background:none;
+  text-align: center;
+}
+
+
+/* SOURCE: https://stackoverflow.com/questions/17042201/how-to-style-input-and-submit-button-with-css */
+
+
+input[type=text],  input[type=number], input[type=password]{ /* type in these boxes */
+  border-radius: 5px;
+  background-color:#8de4c2;
+  color:#44597f;
+  padding:4px;
+  font:11px courier;
+  border:1px solid #44597f;
+  border-left:3px solid #44597f;
+  border-top:3px solid #44597f;
+  opacity:0.5;
+  margin:3px;
+}
+
+/* button styles */
+input[type=submit], input[type=button] {
+  padding:5px 15px;
+  color:#44597f;
+  background:#d0e8e4;
+  font:14px courier;
+  text-transform: uppercase;
+  border: none;
+  margin:2px;
+  border-radius: 19px;
+  border-bottom:4px solid #44597f; /*3D effect!*/
+  border-right:7px solid #44597f; /*3D effect!*/
+}
+
+li input[type=button]{
+  float:right;
+  margin-right:20px;
+  height:20px;
+  padding-bottom:6px;
+  padding-top:1px;
+  border-right:4px solid #44597f;
+  border-bottom:2px solid #44597f;
+}
+
+/*NAVIGATION BUTTONS (FANCIER)*/
+#sidebar input[type=button]{
+  white-space: normal;
+  width: 110px;
+  color:#78d2af;
+  background: #44597f;
+  border: none;
+  border-radius:12px;
+  margin-bottom:15px;
+  border-bottom:2px solid #2fcc8f; /*3D effect!*/
+  border-right:4px solid #2fcc8f; /*3D effect!*/
+}
+
+li{
+  letter-spacing: 5px;
+  font:17pt helvetica;
+  text-transform:capitalize;
+  color:#2fcc8f;
+  text-align:left;
+  letter-spacing: -2px;
+  margin-left:20px;
+  text-shadow: 0px 0px 10px white;
+}
+
+h2{
+  font: 20pt gotham;
+  font-weight:bold;
+  text-transform: uppercase;
+  letter-spacing:2px;
+  color: #cbe2df;
+  text-align:center;
+  background-color:#44597f;
+  margin-top:0px;
+  padding:-2px;
+  line-height:25pt;
+}
+
+
+/*  h4{
+letter-spacing: -1px;
+font: 16px GOTHAM;
+text-transform:uppercase;
+color:#969696;
+font-weight:bold;
+line-height:13px;
+}*/

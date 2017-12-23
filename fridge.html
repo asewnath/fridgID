@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="fridge.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <title>FridgID</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<div id = "closedImage"></div>
+<div id = "openedImage" hidden></div>
+    <!-- LOGIN PAGE -->
+    <div id="loginPage">
+        <div id="mainBody">
+            <h2>Login</h2><br>
+
+            <!-- PAGE CHANGE: BUTTON GOES TO NEW USER -->
+            <!-- LOG IN INFORMATION -->
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username"/><br><br>
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass"/><br><br>
+
+            <!-- PAGE CHANGE: BUTTON GOES TO HOMEPAGE -->
+            <input type="button" id="loginButton" value="Login"/><br>
+            <p id = "error" hidden>Wrong Username or Password! Please try again.</p>
+
+            <!-- PAGE CHANGE: BUTTON GOES TO FORGOT PASSWORD PAGE -->
+            <br><BR><BR><input type="button" id="forgotPasswordButton" value="Forgot your password?"/><br>
+            <input type="button" id="newUserButton" value="Create a new account!"/><br>
+        </div>
+    </div>
+
+    <!-- ADD A NEW USER PAGE -->
+    <div id="newUser" hidden>
+        <div id="mainBody">
+            <h2>Create an Account</h2>
+            <!-- required text entries -->
+            <!-- USERNAME ENTRY -->
+            <label for="desiredUsername">Username:</label>
+            <input type="text" name="desiredUsername" id="desiredUsername" required="required"/><br>
+            <p id ="usernameTaken" style="color: RED" hidden>Username already exists!</p><br>
+
+            <!-- PASSWORD ENTRY -->
+            <label for="desiredPassword">Password:</label>
+            <input type="password" name="desiredPassword" id="desiredPassword" required="required"/><br><br>
+
+            <!-- CONFIRM PASSWORD ENTRY -->
+            <label for="confirmDesiredPassword">Confirm Password:</label>
+            <input type="password" name="confirmDesiredPassword" id="confirmDesiredPassword" required="required"/><br>
+            <p id = "mismatchPassword" style="color: RED" hidden >Passwords do not match!</p><br>
+
+            <!-- PHONE NUMBER ENTRY -->
+            <!--<label for="phoneNumber">Phone Number:</label>
+            <input type="text" name="phoneNumber" id="phoneNumber" required="required"/><br><br>-->
+
+            <!-- GRARAGE OPENER ID ENTRY -->
+            <!--<label for="openerID">Garage Opener ID #:</label>
+            <input type="text" name="openerID" id="openerID" required="required"/><br><br>-->
+
+            <!-- PAGE CHANGE: BUTTON GOES TO USER CONFIRM PAGE -->
+            <input type="button" id="createNewUserButton" value="Create!"/>
+        </div>
+    </div>
+
+    <!-- USER CONFIRMATION SCREEN & RETURN TO LOGIN -->
+    <div id="userConfirm" hidden>
+        <div id="mainBody">
+
+            <!-- CONFIRM CREATION OF ACCOUNT -->
+            <h2>Account Created!</h2>
+            <p id = "displayInfo">Welcome to Garage Door Control!</p>
+
+            <!-- PAGE CHANGE: BUTTON TO RETURN TO LOGIN PAGE -->
+            <input type="button" id="returnToLoginButton" value="Return to Login"/>
+        </div>
+    </div>
+
+    <!-- FORGOT PASSWORD PAGE -->
+    <div id="forgotPassword" hidden>
+        <div id="mainBody">
+            <h2>Password Recovery</h2>
+            Please enter your username:<br>
+
+            <input type="text" name="passwordRecoveryInput" id="userInfo" placeholder="Enter Username"><br><br>
+
+
+            <!-- PAGE CHANGE: BUTTON TO FORGOT PASSWORD PAGE -->
+            <input type="button" id="retrievePasswordButton" value="Retrieve Password"/>
+
+        </div>
+    </div>
+
+    <!-- EMAIL RECOVERY CONFIMRATION PAGE & RETURN TO LOGIN -->
+    <div id="emailRecovery" hidden>
+        <div id="mainBody">
+            <!-- MESSAGE TO CONFIRM PASSWORD RECOVERY REQUEST -->
+            <h2>Password Recovery Result</h2>
+            <p id = "recoveredPasswordMessage"></p>
+
+            <!-- PAGE CHANGE: BUTTON TO RETURN TO LOGIN PAGE -->
+            <input type="button" id="returnToLoginFromCreation" value="Return to Login"/>
+        </div>
+    </div>
+
+    <!-- HOME PAGE / INVENTORY PAGE-->
+    <div id="homePage" hidden>
+        <div id="mainBody">
+            <div id = "inventory">
+                <h2><span id ="welcomeUser"></span>'s Inventory</h2>
+                <ul id="fridgeList">
+                </ul>
+            </div>
+        </div>
+
+        <div id="sidebar">
+           <input type="button" id = "invButton" value="Inventory"/>
+           <input type="button" id = "recRemButton" value="Recently Removed Items"/>
+           <input type="button" id = "grocListButton" value="Grocery List"/>
+           <input type="button" id="returnToLoginFromHome" value="Logout"/>
+           <BR><BR><BR><BR>
+           <B>CURRENT TEMPERATURE:</B>
+        </div>
+
+
+
+    <!-- NAVIGATION -->
+
+<button></button>
+
+
+    <div id="recentlyRemoved" hidden>
+        <div id="mainBody">
+            <h2>Recently Removed Items</h2>
+            <ul id="removedList">
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="groceryList" hidden>
+        <div id="mainBody">
+            <h2>Grocery List</h2>
+            <ul id="grocery">
+            </ul>
+        </div>
+    </div>
+
+</div> <!--FINALLY CLOSING THE HOMEPAGE DIV BOX-->
+
+    <!-- Include the Particle JavaScript library -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/particle-api-js/5/particle.min.js"></script>
+    <script src="fridge.js"></script>
+</body>
+</html>
